@@ -1,0 +1,4 @@
+﻿[*.cs]
+
+# CS0114: Un membre masque un membre hérité ; le mot clé override est manquant
+dotnet_diagnostic.CS0114.severity = none

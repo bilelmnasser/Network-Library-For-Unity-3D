@@ -4,7 +4,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 
-namespace ConnectedGames.Library
+namespace ConnectedGames.Utilities
 {
     public class NetworkInformation
     {
@@ -33,41 +33,12 @@ namespace ConnectedGames.Library
         }
 
         public IPAddress Public_IP;
-      /*  {
-            set { }
-
-            get
-            {
-                Router r = new Router();
-                var k = r.Externel_IPAsync();
-                return k.Result;
-                
-            }
-
-        }
-*/
-
-
-
 
         public IPAddress Server_IP;
 
 
-        public int Server_TCP_Port = 1000;
-        public int Server_UDP_Port = 1000;
-
-
+        public int Server_Port = 1000;
         public int Client_Port = 1002;
-
-      /*  public async Task ForwardingPortsForRouterAsync(string myGameName)
-        {
-
-            Router r = new Router();
-            await r.Create_New_MapAsync(Client_Port, Client_Port, myGameName);
-
-
-
-        }*/
 
 
     }

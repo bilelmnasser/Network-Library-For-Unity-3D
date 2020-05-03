@@ -2,10 +2,15 @@
 using System.IO;
 using System.Text;
 
-namespace ConnectedGames.Library
+namespace ConnectedGames.Utilities
 {
-    class NetworkPacket
+   public class NetworkPacket
     {
+
+        public static NetworkPacket ServerIsFull;
+        public static NetworkPacket ServerKick;
+       // public static NetworkPacket ServerKick;
+
 
         /// <summary>
         /// the Header of Any Packet in our Library is the Length and it's unsigned Integer we dont need negative values ,
@@ -23,16 +28,25 @@ namespace ConnectedGames.Library
         /// first we need the Packet_Length to be read by the receiver than we can know the size of data table
         /// </summary>
         public Byte[] Packet_Data;
-
+        /// <summary>
+        /// Network Packet Constructor
+        /// </summary>
         public NetworkPacket() { }
+        /// <summary>
+        /// Network Packet custom Constructor with data length
+        /// </summary>
         public NetworkPacket(uint packet_Length)
         {
             Packet_Length = packet_Length;
             Packet_Data = new Byte[packet_Length];
         }
-        public void ToString()
+        /// <summary>
+        /// write Network Packet to string
+        /// </summary>
+
+        public string ToString()
         {
-            Console.WriteLine("Size : " + Packet_Length + "ID : " + Packet_Id + " Data : " + Encoding.UTF8.GetString(Packet_Data, 0, Packet_Data.Length));
+            return("Size : " + Packet_Length + " ID : " + Packet_Id + " Data : " + Encoding.UTF8.GetString(Packet_Data, 0, Packet_Data.Length));
 
 
         }

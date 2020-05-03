@@ -46,20 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Library\Client.cs" />
-    <Compile Include="Library\NetworkPacket.cs" />
-    <Compile Include="Library\NetworkInformation.cs" />
-    <Compile Include="Library\RequestProcessor.cs" />
-    <Compile Include="Library\Router.cs" />
-    <Compile Include="Library\Server.cs" />
+    <Compile Include="Network\Client\Client.cs" />
+    <Compile Include="Network\Utilities\NetworkPacket.cs" />
+    <Compile Include="Network\Utilities\NetworkInformation.cs" />
+    <Compile Include="Network\Server\PlayerNetworkCommunication.cs" />
+    <Compile Include="Network\Tools\Router.cs" />
+    <Compile Include="Network\Server\Server.cs" />
+    <Compile Include="GameArchitecture\GameServer.cs" />
+    <Compile Include="GameArchitecture\Lobby.cs" />
+    <Compile Include="GameArchitecture\Player.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Tools\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

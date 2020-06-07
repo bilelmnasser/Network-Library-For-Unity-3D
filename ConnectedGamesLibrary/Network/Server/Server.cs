@@ -1,10 +1,13 @@
 ﻿using ConnectedGames.Server;
 using ConnectedGames.Utilities;
+using ConnectedGames.Frame;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.ComponentModel;
 
 namespace ConnectedGames.Server
 {
@@ -15,6 +18,7 @@ namespace ConnectedGames.Server
 
     class Server : NetworkInformation
     {
+        public static Server Instance=null;
 
         public  static OnMessageReceivedFromPlayer _OnMessageReceivedFromPlayer;
         public static OnPlayerDisconnect _OnPlayerDisconnect;
@@ -29,7 +33,6 @@ namespace ConnectedGames.Server
 
 
         public static Dictionary<int,PlayerNetworkCommunication> Clients_List;
-
 
 
         public Server(int PlayerCount)
@@ -202,6 +205,7 @@ namespace ConnectedGames.Server
                 }
 
         }
+
 
         #endregion
 

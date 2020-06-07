@@ -2,13 +2,12 @@
 using System.IO;
 using System.Text;
 
-namespace ConnectedGames.Utilities
+namespace ConnectedGames.Frame
 {
    public class NetworkPacket
     {
 
-        public static NetworkPacket ServerIsFull;
-        public static NetworkPacket ServerKick;
+      
        // public static NetworkPacket ServerKick;
 
 
@@ -25,7 +24,7 @@ namespace ConnectedGames.Utilities
         /// <summary>
         /// the Network data of our Packet is next in order,
         /// and it's unknow size for the receiver,
-        /// first we need the Packet_Length to be read by the receiver than we can know the size of data table
+        /// first we need the Packet_Length to be read by the receiver than we can know the size of data length
         /// </summary>
         public Byte[] Packet_Data;
         /// <summary>
